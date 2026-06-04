@@ -1,0 +1,26 @@
+[
+  {
+    "user_id": 1,
+    "shop_id": 1,
+    "review" : "Really tasty drinks, wish there was more seating. Would recommend coming early to avoid long lines.",
+    "rating": 5
+  },
+  {
+    "user_id": 2,
+    "shop_id": 1,
+    "review" : "Bean quality could be better but overall solid drinks flavors.",
+    "rating": 4
+  },
+  {
+    "user_id": 3,
+    "shop_id": 1,
+    "review" : "Average coffee drinks. I would probably not come back.",
+    "rating": 2
+  },
+  {
+    "user_id": 4,
+    "shop_id": 1,
+    "review" : "Loved the drink! I come here almost every week! Would highly recommend their specialty drinks.",
+    "rating": 5
+  }
+]

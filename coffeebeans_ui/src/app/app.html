@@ -1,0 +1,91 @@
+<main class="landing-page">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">☕</span>
+      <div>
+        <p class="brand-name">Have you bean yet? </p>
+        <p class="brand-tag">Discover local cafés with ease</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#discover">Discover</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="badge">Coffee shop finder</span>
+      <h1>Find your next favorite café in a single search.</h1>
+      <p>Search nearby coffee shops, compare reviews, and explore cozy spaces curated for every coffee mood.</p>
+
+      <form class="search-card" autocomplete="off">
+        <label class="sr-only" for="location">Search coffee shops</label>
+        <input id="location" type="search" placeholder="Search by city, neighborhood, or coffee style" />
+        <button type="submit">Explore cafés</button>
+      </form>
+
+      <div class="hero-stats">
+        <div><strong>{{totalCoffeeShops()}}</strong> cafés indexed</div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-badge">Top pick</div>
+        <h2>Roast & Relax</h2>
+        <p>Cozy neighborhood spot with handcrafted espresso, pastry pairings, and fast Wi-Fi.</p>
+        <div class="shop-meta">
+          <span>4.8 ★</span>
+          <span>Downtown</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="feature-grid">
+    <article>
+      <h3>Smart search</h3>
+      <p>Filter cafés by rating, distance, ambiance, and coffee style so you get exactly what you need.</p>
+    </article>
+    <article>
+      <h3>Local insights</h3>
+      <p>See customer reviews, opening hours, and the best picks for work, date nights, or quick takeout.</p>
+    </article>
+    <article>
+      <h3>Fast discovery</h3>
+      <p>Browse curated coffee routes and nearby hotspots in one clean, easy-to-use layout.</p>
+    </article>
+  </section>
+
+  <section id="discover" class="discover-section">
+    <div class="discover-copy">
+      <h2>Discover cafés made for your next coffee run</h2>
+      <p>Whether you want a quiet workspace, Instagram-worthy latte art, or the best cold brew, CoffeeBeans helps you get there faster.</p>
+    </div>
+
+    <ul class="discover-list">
+      <li>
+        <strong>Easy browsing</strong>
+        <p>See nearby cafés with ratings, photos, and vibe tags at a glance.</p>
+      </li>
+      <li>
+        <strong>Neighborhood favorites</strong>
+        <p>Get local recommendations and hidden gems loved by coffee lovers.</p>
+      </li>
+      <li>
+        <strong>Plan your visit</strong>
+        <p>Know opening hours, parking, and whether your next cup is walkable.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="about" class="cta-panel">
+    <div>
+      <h2>Ready to find your next coffee stop?</h2>
+      <p>Start exploring cafés nearby with the best ratings, menus, and atmospheres in one app.</p>
+    </div>
+    <button type="button">Start your search</button>
+  </section>
+</main>

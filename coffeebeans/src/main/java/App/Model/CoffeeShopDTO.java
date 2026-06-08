@@ -17,8 +17,28 @@ import javax.persistence.Id;
 public class CoffeeShopDTO{
 
     private String name;
-    private String address;
+    private String city;
+    private String state;
+    private String fullAddress;
+    private boolean outlets;
+    private boolean bathrooms;
+    private boolean outdoorSeating;
+    private boolean cashOk;
 
 
+    public boolean getOutlets() {
+        return outlets;
+    }
 
+    public boolean getBathrooms() {
+        return bathrooms;
+    }
+
+    public boolean getOutdoorSeating() {
+        return outdoorSeating;
+    }
+
+    public boolean getCashOk() {
+        return cashOk;
+    }
 }

@@ -37,6 +37,14 @@ public class CoffeeShopService {
     }
     public CoffeeShop addCoffeeShop(CoffeeShopDTO coffeeShopDTO){
         coffee_shop_counter = coffee_shop_counter + 1;
-        return addCoffeeShop(new CoffeeShop(coffee_shop_counter, coffeeShopDTO.getName(), coffeeShopDTO.getAddress()));
+        return addCoffeeShop(new CoffeeShop(coffee_shop_counter, coffeeShopDTO.getName(), coffeeShopDTO.getCity(), coffeeShopDTO.getState(), coffeeShopDTO.getFullAddress(), coffeeShopDTO.getOutlets(), coffeeShopDTO.getBathrooms(), coffeeShopDTO.getOutdoorSeating(), coffeeShopDTO.getCashOk()));
+    }
+
+    public int getTotalCoffeeShops(){
+        return getCoffeeShops().size();
+    }
+
+    public List<CoffeeShop> getTopRecShops(int count) {
+        return coffeeShopRepository.findTop1ByOrderById();
     }
 }

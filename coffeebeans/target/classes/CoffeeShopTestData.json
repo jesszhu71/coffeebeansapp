@@ -1,10 +1,22 @@
 [
   {
     "name": "Andytown Coffee Roasters (Ocean Beach)",
-    "address": "800 Great Hwy, San Francisco, CA 94121"
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "800 Great Hwy, San Francisco, CA 94121",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating":true,
+    "cashOk": true
   },
   {
     "name": "The Coffee Movement",
-    "address": "1737 Balboa St, San Francisco, CA 94121"
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1737 Balboa St, San Francisco, CA 94121",
+    "outlets": false,
+    "bathrooms": false,
+    "outdoorSeating":true,
+    "cashOk": true
   }
 ]

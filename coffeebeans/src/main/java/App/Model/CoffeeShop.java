@@ -19,8 +19,13 @@ public class CoffeeShop {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private String address;
-
+    private String city;
+    private String state;
+    private String fullAddress;
+    private boolean outlets;
+    private boolean bathrooms;
+    private boolean outdoorSeating;
+    private boolean cashOk;
 
 
 }

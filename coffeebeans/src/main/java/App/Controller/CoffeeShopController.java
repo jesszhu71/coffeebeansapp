@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class CoffeeShopController {
     CoffeeShopService coffeeShopService;
@@ -24,6 +25,7 @@ public class CoffeeShopController {
    @Autowired
     public CoffeeShopController(CoffeeShopService coffeeShopService){
        this.coffeeShopService = coffeeShopService;
+       populateCoffeeShops();
    }
 
    //@RequestMapping(value = '', method = RequestMethod.GET)
@@ -40,15 +42,28 @@ public class CoffeeShopController {
     }
 
     // retrieve coffee shop
-    @PostMapping("/coffeeshop/get/{shop_id}")
+    @GetMapping("/coffeeshop/get/{shop_id}")
     public Optional<CoffeeShop> getCoffeeShop(@PathVariable Long shop_id){
         return coffeeShopService.getCoffeeShopById(shop_id);
     }
 
     // get all coffee shop
-    @PostMapping("/coffeeshop/getAll")
+    @GetMapping("/coffeeshop/getAll")
     public List<CoffeeShop> getCoffeeShops(){
         return coffeeShopService.getCoffeeShops();
+    }
+
+    @GetMapping("/coffeeshop/getCount")
+    public int getTotalCoffeeShops(){
+        return coffeeShopService.getTotalCoffeeShops();
+    }
+//    @GetMapping("/coffeeshop/getTopRecShops/{count}")
+//    public List<CoffeeShop> getTopRecShops(@PathVariable int count){
+//        return coffeeShopService.getTopRecShops(1);
+//    }
+    @GetMapping("/coffeeshop/getTopRecShop")
+    public CoffeeShop getTopRecShops(@PathVariable int count){
+        return coffeeShopService.getTopRecShops(1).get(0);
     }
 
     // populate default coffee shop population

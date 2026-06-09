@@ -39,6 +39,10 @@ export class App implements OnInit {
   })
   topPickCoffeeShopRating = signal(0);
 
+  displayCoffeeShops = signal<CoffeeShop[]>([]);
+  availableCities = signal<string[]>([]);
+  searchTerm = signal<string>('');
+
   constructor(private coffeeShopService: CoffeeShopService, private cdr: ChangeDetectorRef) { // runs first
 
   }
@@ -49,6 +53,9 @@ export class App implements OnInit {
       this.getTopPickCoffeeShop();
       this.getTopPickCoffeeShopReview();
       this.getTopPickCoffeeShopRating();
+      this.getAllCoffeeShops();
+      this.getAvailableCities();
+
       // localStorage.setItem('mySavedData', JSON.stringify(this.totalCoffeeShops))
     }
     
@@ -85,6 +92,30 @@ export class App implements OnInit {
         console.log(`Top pick coffee shop review: ${this.topPickCoffeeShopReview().review}`);
       });
       return this.topPickCoffeeShopReview();
+    }
+
+    getAllCoffeeShops(): void {
+      this.coffeeShopService.getAllCoffeeShops().subscribe(coffeeShops => {
+        this.displayCoffeeShops = signal(coffeeShops);
+        this.cdr.detectChanges();
+        console.log(`All coffee shops: ${this.displayCoffeeShops().length}`);
+      });
+    }
+
+    getAllCoffeeShopsByCity(city: string): void {
+      this.coffeeShopService.getAllCoffeeShopsByCity(city).subscribe(coffeeShops => {
+        this.displayCoffeeShops = signal(coffeeShops);
+        this.cdr.detectChanges();
+        console.log(`Coffee shops in ${city}: ${this.displayCoffeeShops().length}`);
+      });
+    }
+
+    getAvailableCities(): void {
+      this.coffeeShopService.getAvailableCities().subscribe(cities => {
+        this.availableCities = signal(cities);
+        this.cdr.detectChanges();
+        console.log(`Available cities: ${this.availableCities()}`);
+      });
     }
 }
 

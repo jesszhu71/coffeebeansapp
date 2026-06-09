@@ -89,6 +89,8 @@ public class CoffeeShopController {
         return reviewService.getCoffeeShopRating(coffeeShop.get().getId());
     }
 
+    // getAvailableCities
+
 
 
 

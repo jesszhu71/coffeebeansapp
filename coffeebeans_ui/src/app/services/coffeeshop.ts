@@ -15,16 +15,16 @@ export class CoffeeShopService {
     constructor (private httpClient:HttpClient){
     }
 
-    getAllCoffeeShops() : Observable<any>{
+    getAllCoffeeShops() : Observable<Array<CoffeeShop>>{
         return this.httpClient.get<Array<CoffeeShop>>(`${this.apiBaseUrl}/coffeeshop/getAll`);
 
     }
 
-    getCoffeeShopById(id : number) : Observable<any>{
+    getCoffeeShopById(id : number) : Observable<CoffeeShop>{
         return this.httpClient.get<CoffeeShop>(`${this.apiBaseUrl}/coffeeshop/get/${id}`);
     }
 
-    getAllReviewsForCoffeeShopById(id : number) : Observable<any>{
+    getAllReviewsForCoffeeShopById(id : number) : Observable<Array<Review>>{
         return this.httpClient.get<Array<Review>>(`${this.apiBaseUrl}/review/byShop/${id}`);
     }
 
@@ -49,14 +49,15 @@ export class CoffeeShopService {
         return this.httpClient.get<number>(`${this.apiBaseUrl}/review/getTopRecShopRating`);
     }
 
-    // get top rec by city
-    getCoffeeShopByCity(city: string): Observable<Array<CoffeeShop>>{
-        return this.httpClient.get<Array<CoffeeShop>>(`${this.apiBaseUrl}/coffeeshop/getByCity/${city}`);
+
+    // get available cities
+    getAvailableCities(): Observable<Array<string>> {
+        return this.httpClient.get<Array<string>>(`${this.apiBaseUrl}/coffeeshop/getAvailableCities`);
     }
 
-    // 
-
-
+    getAllCoffeeShopsByCity(city: string): Observable<Array<CoffeeShop>> {
+        return this.httpClient.get<Array<CoffeeShop>>(`${this.apiBaseUrl}/coffeeshop/getByCity/${city}`);
+    }
 
 
 

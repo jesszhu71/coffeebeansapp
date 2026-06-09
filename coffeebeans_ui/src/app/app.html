@@ -18,11 +18,10 @@
     <div class="hero-copy">
       <h1>Find your next favorite café in a single search.</h1>
       <p>Search nearby coffee shops, compare reviews, and explore cozy spaces curated for every coffee mood.</p>
-
       <form class="search-card" autocomplete="off">
         <label class="sr-only" for="location">Search coffee shops</label>
-        <input id="location" type="search" placeholder="Search by city, neighborhood, or coffee style" />
-        <button type="submit">Explore cafés</button>
+        <input id="location" type="search" placeholder="Search by city" />
+        <button type="submit">Search</button>
       </form>
 
       <div class="hero-stats">
@@ -44,10 +43,19 @@
   </section>
 
   <section id="features" class="feature-grid">
-    <article>
+      @for (coffeeshop of displayCoffeeShops(); track coffeeshop.id; let i = $index) {
+        <!-- <li>Index: {{ i }} - {{ user.name }} ({{ user.role }})</li> -->
+        <article>
+          <h3>{{ coffeeshop.name }}</h3>
+          <p>{{ coffeeshop.fullAddress }}</p>
+        </article>
+      } @empty {
+        <li>No cafés found!</li>
+      }
+    <!-- <article>
       <h3>Smart search</h3>
       <p>Filter cafés by rating, distance, ambiance, and coffee style so you get exactly what you need.</p>
-    </article>
+    </article> -->
 
   </section>
 

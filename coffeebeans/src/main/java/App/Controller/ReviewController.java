@@ -2,8 +2,6 @@ package App.Controller;
 
 import App.Model.Review;
 import App.Model.ReviewDTO;
-import App.Model.Review;
-import App.Model.ReviewDTO;
 import App.Service.ReviewService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,7 +23,9 @@ public class ReviewController {
 
     @Autowired
     public ReviewController (ReviewService reviewService){
+
         this.reviewService = reviewService;
+        populateReviews();
     }
 
     @GetMapping("/review/health/")
@@ -51,7 +51,7 @@ public class ReviewController {
     // get all reviews for a shop
     @GetMapping("/review/byShop/{shop_id}")
     public List<Review> getReviewsByShopid(@PathVariable Long shop_id){
-        return reviewService.getReviewsByShopid(shop_id);
+        return reviewService.getReviewsByShopId(shop_id);
     }
 
     // get all reviews from a user

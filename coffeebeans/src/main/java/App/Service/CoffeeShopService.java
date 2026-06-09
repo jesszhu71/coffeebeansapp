@@ -45,6 +45,11 @@ public class CoffeeShopService {
     }
 
     public List<CoffeeShop> getTopRecShops(int count) {
+
         return coffeeShopRepository.findTop1ByOrderById();
+    }
+
+    public List<CoffeeShop> getCoffeeShopsByCity(String city) {
+        return coffeeShopRepository.getCoffeeShopByCity(city);
     }
 }

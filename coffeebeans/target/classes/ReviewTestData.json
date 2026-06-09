@@ -2,25 +2,91 @@
   {
     "user_id": 1,
     "shop_id": 1,
-    "review" : "Really tasty drinks, wish there was more seating. Would recommend coming early to avoid long lines.",
+    "review": "Really tasty drinks, wish there was more seating. Would recommend coming early to avoid long lines.",
     "rating": 5
   },
   {
     "user_id": 2,
     "shop_id": 1,
-    "review" : "Bean quality could be better but overall solid drinks flavors.",
+    "review": "Bean quality could be better but overall solid drinks flavors.",
     "rating": 4
   },
   {
     "user_id": 3,
     "shop_id": 1,
-    "review" : "Average coffee drinks. I would probably not come back.",
+    "review": "Average coffee drinks. I would probably not come back.",
     "rating": 2
   },
   {
     "user_id": 4,
     "shop_id": 1,
-    "review" : "Loved the drink! I come here almost every week! Would highly recommend their specialty drinks.",
+    "review": "Loved the drink! I come here almost every week! Would highly recommend their specialty drinks.",
     "rating": 5
+  },
+  {
+    "user_id": 5,
+    "shop_id": 2,
+    "review": "Great atmosphere and friendly staff. Coffee was excellent.",
+    "rating": 5
+  },
+  {
+    "user_id": 6,
+    "shop_id": 2,
+    "review": "Decent coffee but a bit overpriced for the portion size.",
+    "rating": 3
+  },
+  {
+    "user_id": 7,
+    "shop_id": 2,
+    "review": "No outlets here which is disappointing. Otherwise nice place.",
+    "rating": 3
+  },
+  {
+    "user_id": 8,
+    "shop_id": 3,
+    "review": "Best pour-over in the city! Baristas really know their craft.",
+    "rating": 5
+  },
+  {
+    "user_id": 9,
+    "shop_id": 3,
+    "review": "Busy during peak hours but worth the wait.",
+    "rating": 4
+  },
+  {
+    "user_id": 10,
+    "shop_id": 4,
+    "review": "Terrible service. Waited 20 minutes for my order.",
+    "rating": 1
+  },
+  {
+    "user_id": 11,
+    "shop_id": 4,
+    "review": "The espresso shots were perfectly extracted. Loved it!",
+    "rating": 5
+  },
+  {
+    "user_id": 12,
+    "shop_id": 5,
+    "review": "Good coffee but the place is always crowded.",
+    "rating": 3
+  },
+  {
+    "user_id": 13,
+    "shop_id": 5,
+    "review": "My new favorite spot! Great vibes and amazing cold brew.",
+    "rating": 5
+  },
+  {
+    "user_id": 14,
+    "shop_id": 6,
+    "review": "Consistent quality every time I visit.",
+    "rating": 4
+  },
+  {
+    "user_id": 15,
+    "shop_id": 6,
+    "review": "Stale pastries and mediocre coffee. Not coming back.",
+    "rating": 2
   }
 ]

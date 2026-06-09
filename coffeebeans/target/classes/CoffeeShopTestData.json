@@ -6,7 +6,7 @@
     "fullAddress": "800 Great Hwy, San Francisco, CA 94121",
     "outlets": true,
     "bathrooms": true,
-    "outdoorSeating":true,
+    "outdoorSeating": true,
     "cashOk": true
   },
   {
@@ -16,7 +16,87 @@
     "fullAddress": "1737 Balboa St, San Francisco, CA 94121",
     "outlets": false,
     "bathrooms": false,
-    "outdoorSeating":true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Blue Bottle Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "300 Webster St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": false
+  },
+  {
+    "name": "Sightglass Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "270 Valencia St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Ritual Coffee Roasters",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "432 Valencia St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Espresso Cigar",
+    "city": "Oakland",
+    "state": "CA",
+    "fullAddress": "430 23rd St, Oakland, CA 94612",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Peet's Coffee & Tea",
+    "city": "Berkeley",
+    "state": "CA",
+    "fullAddress": "2156 University Ave, Berkeley, CA 94704",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Café Himalayan",
+    "city": "San Jose",
+    "state": "CA",
+    "fullAddress": "149 E Santa Clara St, San Jose, CA 95113",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Voyage Coffee Co",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2979 16th St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "The Wormhole Coffee",
+    "city": "Oakland",
+    "state": "CA",
+    "fullAddress": "2247 Telegraph Ave, Oakland, CA 94612",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
     "cashOk": true
   }
 ]

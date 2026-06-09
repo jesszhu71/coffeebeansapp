@@ -37,8 +37,8 @@ public class ReviewService {
         return reviewRepository.findById(id);
     }
 
-    public List<Review> getReviewsByShopid(Long shop_id){
-        return reviewRepository.getReviewsByShopid(shop_id);
+    public List<Review> getReviewsByShopId(Long shop_id){
+        return reviewRepository.getReviewsByShopId(shop_id);
     }
 
     public List<Review> getReviewsByUserId(Long user_id){
@@ -50,16 +50,11 @@ public class ReviewService {
     }
 
 
+    public Review getTopReviewsByShopId(long id) {
+        return reviewRepository.getTopReviewByShopId(id).get(0);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    public Long getTopShopByRating() {
+        return reviewRepository.getTopRatedShop().get(0);
+    }
 }

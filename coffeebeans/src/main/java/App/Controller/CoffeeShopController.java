@@ -3,7 +3,9 @@ package App.Controller;
 
 import App.Model.CoffeeShop;
 import App.Model.CoffeeShopDTO;
+import App.Model.Review;
 import App.Service.CoffeeShopService;
+import App.Service.ReviewService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +22,13 @@ import java.util.Optional;
 @RestController
 public class CoffeeShopController {
     CoffeeShopService coffeeShopService;
+    ReviewService reviewService;
 
 
    @Autowired
-    public CoffeeShopController(CoffeeShopService coffeeShopService){
+    public CoffeeShopController(CoffeeShopService coffeeShopService, ReviewService reviewService){
        this.coffeeShopService = coffeeShopService;
+       this.reviewService = reviewService;
        populateCoffeeShops();
    }
 
@@ -62,9 +66,31 @@ public class CoffeeShopController {
 //        return coffeeShopService.getTopRecShops(1);
 //    }
     @GetMapping("/coffeeshop/getTopRecShop")
-    public CoffeeShop getTopRecShops(@PathVariable int count){
-        return coffeeShopService.getTopRecShops(1).get(0);
+    public Optional<CoffeeShop> getTopRecShops(){ // gets the coffee shop of highest rating
+        // return coffeeShopService.getTopRecShops(1).get(0);
+        Long id = reviewService.getTopShopByRating();
+        return coffeeShopService.getCoffeeShopById(id);
+
     }
+    @GetMapping("/coffeeshop/getByCity/{city}")
+    public List<CoffeeShop> getCoffeeShopsByCity(@PathVariable String city){
+        return coffeeShopService.getCoffeeShopsByCity(city);
+    }
+
+    @GetMapping("/review/getTopRecShopReview")
+    public Review getTopRecShopReview(){ // returns the top review of the top shop
+       Optional<CoffeeShop> coffeeShop = getTopRecShops();
+       return reviewService.getTopReviewsByShopId(coffeeShop.get().getId());
+    }
+
+    @GetMapping("/review/getTopRecShopRating")
+    public double getTopRecShopRating(){
+        Optional<CoffeeShop> coffeeShop = getTopRecShops();
+        return reviewService.getCoffeeShopRating(coffeeShop.get().getId());
+    }
+
+
+
 
     // populate default coffee shop population
     @PostMapping("/coffeeshop/populate")

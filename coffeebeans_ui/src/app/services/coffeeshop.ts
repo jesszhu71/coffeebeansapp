@@ -39,12 +39,23 @@ export class CoffeeShopService {
 
     // get top rec from db
     getTopCoffeeShop(): Observable<CoffeeShop>{
-        return this.httpClient.get<CoffeeShop>(`${this.apiBaseUrl}/coffeeshop/getTop`);
+        return this.httpClient.get<CoffeeShop>(`${this.apiBaseUrl}/coffeeshop/getTopRecShop`);
     }
 
-    // get top rec by neighborhood
+    getTopPickCoffeeShopReview(): Observable<Review> {
+        return this.httpClient.get<Review>(`${this.apiBaseUrl}/review/getTopRecShopReview`);
+    }
+    getTopPickCoffeeShopRating(): Observable<number> {
+        return this.httpClient.get<number>(`${this.apiBaseUrl}/review/getTopRecShopRating`);
+    }
+
+    // get top rec by city
+    getCoffeeShopByCity(city: string): Observable<Array<CoffeeShop>>{
+        return this.httpClient.get<Array<CoffeeShop>>(`${this.apiBaseUrl}/coffeeshop/getByCity/${city}`);
+    }
 
     // 
+
 
 
 

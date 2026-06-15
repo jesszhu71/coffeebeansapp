@@ -7,16 +7,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ChangeDetectorRef } from '@angular/core';
 import { CoffeeShop } from './models/coffeeshop';
 import { Review } from './models/review';
+import { OnDestroy } from '@angular/core';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
+import { AsyncPipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, 
-    RouterOutlet],
+  imports: [CommonModule, RouterOutlet, ReactiveFormsModule, AsyncPipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit {
+export class App implements OnInit, OnDestroy {
   //totalCoffeeShops : number = 0;
   totalCoffeeShops = signal(0);
   topPickCoffeeShop = signal({
@@ -40,8 +44,14 @@ export class App implements OnInit {
   topPickCoffeeShopRating = signal(0);
 
   displayCoffeeShops = signal<CoffeeShop[]>([]);
-  availableCities = signal<string[]>([]);
-  searchTerm = signal<string>('');
+  //availableCities = signal<string[]>([]);
+  //searchTerm = signal('');
+  searchControl = signal(new FormControl(''));
+  filteredItems = signal<CoffeeShop[]>([]);
+
+
+  private destroy$ = new Subject<void>();
+
 
   constructor(private coffeeShopService: CoffeeShopService, private cdr: ChangeDetectorRef) { // runs first
 
@@ -54,9 +64,34 @@ export class App implements OnInit {
       this.getTopPickCoffeeShopReview();
       this.getTopPickCoffeeShopRating();
       this.getAllCoffeeShops();
-      this.getAvailableCities();
+      this.setFilterControl();
+      this.filteredItems = signal<CoffeeShop[]>([...this.displayCoffeeShops()]);
+      this.filterResults(this.searchControl().value || '');
+
+
+      this.searchControl().valueChanges.pipe(
+        debounceTime(300),         // Wait 300ms after the user stops typing
+        distinctUntilChanged(),    // Only trigger if the value actually changed
+        takeUntil(this.destroy$)   // Clean up subscription to prevent memory leaks
+      ).subscribe(term => {
+        this.filterResults(term || '');
+      });
 
       // localStorage.setItem('mySavedData', JSON.stringify(this.totalCoffeeShops))
+    }
+    
+    setFilterControl(): void {
+      this.searchControl().setValue(' ');
+      this.cdr.detectChanges();
+    }
+
+    filterResults(term: string): Array<CoffeeShop> {
+      const cleanTerm = term.toLowerCase().trim();
+      this.filteredItems = signal(this.displayCoffeeShops().filter(item => 
+        item.name.toLowerCase().includes(cleanTerm) || item.city.toLowerCase().startsWith(cleanTerm)
+      ));
+      console.log("Filtered items:", this.filteredItems());
+      return this.filteredItems();
     }
     
     getTotalCoffeeShops(): number {
@@ -94,12 +129,15 @@ export class App implements OnInit {
       return this.topPickCoffeeShopReview();
     }
 
-    getAllCoffeeShops(): void {
+    getAllCoffeeShops(): Array<CoffeeShop> {
       this.coffeeShopService.getAllCoffeeShops().subscribe(coffeeShops => {
         this.displayCoffeeShops = signal(coffeeShops);
         this.cdr.detectChanges();
+        this.filteredItems = signal(coffeeShops);
         console.log(`All coffee shops: ${this.displayCoffeeShops().length}`);
       });
+      this.filterResults(this.searchControl().value || '');
+      return this.displayCoffeeShops();
     }
 
     getAllCoffeeShopsByCity(city: string): void {
@@ -110,12 +148,10 @@ export class App implements OnInit {
       });
     }
 
-    getAvailableCities(): void {
-      this.coffeeShopService.getAvailableCities().subscribe(cities => {
-        this.availableCities = signal(cities);
-        this.cdr.detectChanges();
-        console.log(`Available cities: ${this.availableCities()}`);
-      });
+
+    ngOnDestroy() {
+      this.destroy$.next();
+      this.destroy$.complete();
     }
 }
 

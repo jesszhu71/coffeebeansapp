@@ -20,7 +20,7 @@
       <p>Search nearby coffee shops, compare reviews, and explore cozy spaces curated for every coffee mood.</p>
       <form class="search-card" autocomplete="off">
         <label class="sr-only" for="location">Search coffee shops</label>
-        <input id="location" type="search" placeholder="Search by city" />
+        <input id="location" type="text" placeholder="Search by city or name" [formControl]="searchControl()" />
         <button type="submit">Search</button>
       </form>
 
@@ -43,14 +43,17 @@
   </section>
 
   <section id="features" class="feature-grid">
-      @for (coffeeshop of displayCoffeeShops(); track coffeeshop.id; let i = $index) {
+      @for (coffeeshop of filteredItems(); track coffeeshop.id; let i = $index) {
         <!-- <li>Index: {{ i }} - {{ user.name }} ({{ user.role }})</li> -->
         <article>
-          <h3>{{ coffeeshop.name }}</h3>
+          <h3><a href="/coffeeshops/{{ coffeeshop.id }}">{{ coffeeshop.name }}</a></h3>
           <p>{{ coffeeshop.fullAddress }}</p>
         </article>
       } @empty {
-        <li>No cafés found!</li>
+        <article>
+          <h3> </h3>
+          <p> </p>
+        </article>
       }
     <!-- <article>
       <h3>Smart search</h3>

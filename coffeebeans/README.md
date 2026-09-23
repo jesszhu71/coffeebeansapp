@@ -1,15 +1,15 @@
 # SPR-CL-RESTCONTROLLER
 
-This coding lab covers unit "Spring Web", module "Request Handling".
+This the backend for my coffeebeansapp
 
 ## Instructions
-- This application shows how we can create endpoints in a Spring Web App.
-- Look out for TODO statements in App.Control.SampleController to see what needs to be added/changed.
+- Build and run this locally (recommended to be run in Intellij) and end points can be called from postman
+- run "Populate defaults" to populate some default values for a demo
 
-## Shouldn't Modify (But Look at for Context)
-- App.Model.Sample
-- App.Application
-- Test files
-
-## Should Modify
-- App.Controller.SampleController
+## Sample Endpoints:
+- Add any coffee shop: POST("/coffeeshop/add"), Request Body: (CoffeeShop json object)
+- Retrieve the shop with the highest rating: GET("/coffeeshop/getTopRecShop")
+- Retrieve shop by city: GET("/coffeeshop/getByCity/{city}")
+- Add users: POST("/user/add"), Request Body: (UserAccount json object)
+- Add reviews: POST("/review/add"), Request Body: (Review json object)
+- Populate defaults: POST("/coffeeshop/populate"), POST("/review/populate"), POST("/user/populate")

@@ -59,5 +59,6 @@ describe('App', () => {
 
     expect(filtered.length).toBe(1);
     expect(filtered[0].name).toBe('Bean & Bloom');
+    expect(app.filteredCoffeeShopCount()).toBe(1);
   });
 });

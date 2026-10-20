@@ -53,6 +53,7 @@ export class App implements OnInit, OnDestroy {
     cashOk: false,
   });
   filteredItems = signal<CoffeeShop[]>([]);
+  filteredCoffeeShopCount = signal(0);
   isDetailsPage = signal(false);
 
   private destroy$ = new Subject<void>();
@@ -128,26 +129,27 @@ export class App implements OnInit, OnDestroy {
       const activeFilters = this.filterOptions();
       const hasActiveFilters = Object.values(activeFilters).some(Boolean);
 
-      this.filteredItems.set(
-        this.displayCoffeeShops().filter(item => {
-          const matchesText = !cleanTerm || item.name.toLowerCase().includes(cleanTerm) || item.city.toLowerCase().startsWith(cleanTerm);
+      const nextFilteredItems = this.displayCoffeeShops().filter(item => {
+        const matchesText = !cleanTerm || item.name.toLowerCase().includes(cleanTerm) || item.city.toLowerCase().startsWith(cleanTerm);
 
-          if (!matchesText) {
-            return false;
-          }
+        if (!matchesText) {
+          return false;
+        }
 
-          if (!hasActiveFilters) {
-            return true;
-          }
+        if (!hasActiveFilters) {
+          return true;
+        }
 
-          return (
-            (!activeFilters.outlets || item.outlets) &&
-            (!activeFilters.bathrooms || item.bathrooms) &&
-            (!activeFilters.outdoorSeating || item.outdoorSeating) &&
-            (!activeFilters.cashOk || item.cashOk)
-          );
-        })
-      );
+        return (
+          (!activeFilters.outlets || item.outlets) &&
+          (!activeFilters.bathrooms || item.bathrooms) &&
+          (!activeFilters.outdoorSeating || item.outdoorSeating) &&
+          (!activeFilters.cashOk || item.cashOk)
+        );
+      });
+
+      this.filteredItems.set(nextFilteredItems);
+      this.filteredCoffeeShopCount.set(nextFilteredItems.length);
 
       console.log('Filtered items:', this.filteredItems());
       return this.filteredItems();

@@ -46,6 +46,12 @@ export class App implements OnInit, OnDestroy {
   //availableCities = signal<string[]>([]);
   //searchTerm = signal('');
   searchControl = signal(new FormControl(''));
+  filterOptions = signal({
+    outlets: false,
+    bathrooms: false,
+    outdoorSeating: false,
+    cashOk: false,
+  });
   filteredItems = signal<CoffeeShop[]>([]);
   isDetailsPage = signal(false);
 
@@ -107,12 +113,43 @@ export class App implements OnInit, OnDestroy {
       this.cdr.detectChanges();
     }
 
+    handleFilterChange(
+      option: 'outlets' | 'bathrooms' | 'outdoorSeating' | 'cashOk',
+      checked: boolean
+    ): void {
+      const nextFilters = { ...this.filterOptions() };
+      nextFilters[option] = checked;
+      this.filterOptions.set(nextFilters);
+      this.updateSearchResults();
+    }
+
     filterResults(term: string): Array<CoffeeShop> {
       const cleanTerm = term.toLowerCase().trim();
-      this.filteredItems = signal(this.displayCoffeeShops().filter(item => 
-        item.name.toLowerCase().includes(cleanTerm) || item.city.toLowerCase().startsWith(cleanTerm)
-      ));
-      console.log("Filtered items:", this.filteredItems());
+      const activeFilters = this.filterOptions();
+      const hasActiveFilters = Object.values(activeFilters).some(Boolean);
+
+      this.filteredItems.set(
+        this.displayCoffeeShops().filter(item => {
+          const matchesText = !cleanTerm || item.name.toLowerCase().includes(cleanTerm) || item.city.toLowerCase().startsWith(cleanTerm);
+
+          if (!matchesText) {
+            return false;
+          }
+
+          if (!hasActiveFilters) {
+            return true;
+          }
+
+          return (
+            (!activeFilters.outlets || item.outlets) &&
+            (!activeFilters.bathrooms || item.bathrooms) &&
+            (!activeFilters.outdoorSeating || item.outdoorSeating) &&
+            (!activeFilters.cashOk || item.cashOk)
+          );
+        })
+      );
+
+      console.log('Filtered items:', this.filteredItems());
       return this.filteredItems();
     }
     

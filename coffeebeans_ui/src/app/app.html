@@ -30,6 +30,41 @@
         <button type="button" (click)="updateSearchResults()">Search</button>
       </form>
 
+      <div class="filter-options" aria-label="Coffee shop amenities filters">
+        <label class="filter-option">
+          <input
+            type="checkbox"
+            [checked]="filterOptions().outlets"
+            (change)="handleFilterChange('outlets', $any($event.target).checked)"
+          />
+          <span>Outlets</span>
+        </label>
+        <label class="filter-option">
+          <input
+            type="checkbox"
+            [checked]="filterOptions().bathrooms"
+            (change)="handleFilterChange('bathrooms', $any($event.target).checked)"
+          />
+          <span>Bathrooms</span>
+        </label>
+        <label class="filter-option">
+          <input
+            type="checkbox"
+            [checked]="filterOptions().outdoorSeating"
+            (change)="handleFilterChange('outdoorSeating', $any($event.target).checked)"
+          />
+          <span>Outdoor seating</span>
+        </label>
+        <label class="filter-option">
+          <input
+            type="checkbox"
+            [checked]="filterOptions().cashOk"
+            (change)="handleFilterChange('cashOk', $any($event.target).checked)"
+          />
+          <span>Cash payment</span>
+        </label>
+      </div>
+
       <div class="hero-stats">
         <div><strong>{{totalCoffeeShops()}}</strong> cafés indexed</div>
       </div>

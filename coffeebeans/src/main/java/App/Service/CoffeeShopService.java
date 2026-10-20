@@ -22,7 +22,7 @@ public class CoffeeShopService {
     public CoffeeShopService (CoffeeShopRepository coffeeShopRespository){
         this.coffeeShopRepository = coffeeShopRespository;
     }
-
+    
 
     public List<CoffeeShop> getCoffeeShops(){
         return coffeeShopRepository.findAll();

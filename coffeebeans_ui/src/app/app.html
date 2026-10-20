@@ -1,4 +1,4 @@
-<main class="landing-page">
+<main *ngIf="!isDetailsPage()" class="landing-page">
   <header class="topbar">
     <div class="brand">
       <span class="brand-mark">☕</span>
@@ -20,8 +20,14 @@
       <p>Search nearby coffee shops, compare reviews, and explore cozy spaces curated for every coffee mood.</p>
       <form class="search-card" autocomplete="off">
         <label class="sr-only" for="location">Search coffee shops</label>
-        <input id="location" type="text" placeholder="Search by city or name" [formControl]="searchControl()" />
-        <button type="submit">Search</button>
+        <input
+          id="location"
+          type="text"
+          placeholder="Search by city or name"
+          [formControl]="searchControl()"
+          (input)="handleSearchInput($event)"
+        />
+        <button type="button" (click)="updateSearchResults()">Search</button>
       </form>
 
       <div class="hero-stats">
@@ -46,7 +52,7 @@
       @for (coffeeshop of filteredItems(); track coffeeshop.id; let i = $index) {
         <!-- <li>Index: {{ i }} - {{ user.name }} ({{ user.role }})</li> -->
         <article>
-          <h3><a href="/coffeeshops/{{ coffeeshop.id }}">{{ coffeeshop.name }}</a></h3>
+          <h3><a [routerLink]="['/coffeeshops', coffeeshop.id]">{{ coffeeshop.name }}</a></h3>
           <p>{{ coffeeshop.fullAddress }}</p>
         </article>
       } @empty {
@@ -92,3 +98,4 @@
     <button type="button">Start your search</button>
   </section> -->
 </main>
+<router-outlet *ngIf="isDetailsPage()"></router-outlet>

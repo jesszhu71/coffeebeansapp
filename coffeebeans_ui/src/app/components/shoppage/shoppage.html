@@ -1,0 +1,66 @@
+<section class="shop-detail-page" *ngIf="coffeeShop(); else loadingTemplate">
+  <div class="detail-card">
+    <div class="detail-header">
+      <div>
+        <span class="detail-badge">Café details</span>
+        <h1>{{ coffeeShop()?.name }}</h1>
+        <p class="detail-location">{{ coffeeShop()?.fullAddress }}</p>
+        <p class="detail-subtitle">{{ coffeeShop()?.city }}, {{ coffeeShop()?.state }}</p>
+      </div>
+      <a routerLink="/" class="back-link">← Back to search</a>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-summary">
+        <div class="detail-summary-card">
+          <p class="summary-label">Average rating</p>
+          <h2>{{ getAverageRating() }}</h2>
+          <p class="summary-copy">
+            {{ reviews().length ? reviews().length + ' review' + (reviews().length === 1 ? '' : 's') + ' from real visitors.' : 'No reviews available yet.' }}
+          </p>
+        </div>
+
+        <div class="amenities">
+          <h2>Amenities</h2>
+          <ul class="amenities-list">
+            <li>
+              <span>Outlets</span>
+              <strong>{{ coffeeShop()?.outlets ? 'Available' : 'Unavailable' }}</strong>
+            </li>
+            <li>
+              <span>Bathrooms</span>
+              <strong>{{ coffeeShop()?.bathrooms ? 'Available' : 'Unavailable' }}</strong>
+            </li>
+            <li>
+              <span>Outdoor seating</span>
+              <strong>{{ coffeeShop()?.outdoorSeating ? 'Available' : 'Unavailable' }}</strong>
+            </li>
+            <li>
+              <span>Cash accepted</span>
+              <strong>{{ coffeeShop()?.cashOk ? 'Yes' : 'No' }}</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reviews-panel">
+        <h2>Recent reviews</h2>
+        <div *ngIf="reviews().length; else noReviews">
+          <article class="review-card" *ngFor="let review of reviews()">
+            <p class="review-text">"{{ review.review }}"</p>
+            <p class="review-meta">Rating: {{ review.rating }} / 5</p>
+          </article>
+        </div>
+        <ng-template #noReviews>
+          <p class="no-reviews">No reviews yet. Be the first to share your experience!</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #loadingTemplate>
+  <div class="detail-loading">
+    <p>Loading coffee shop details…</p>
+  </div>
+</ng-template>

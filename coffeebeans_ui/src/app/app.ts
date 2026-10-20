@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet, NavigationEnd } from '@angular/router';
 import { CoffeeShopService } from './services/coffeeshop';
 import { OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';  
@@ -10,13 +10,12 @@ import { Review } from './models/review';
 import { OnDestroy } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
-import { AsyncPipe } from '@angular/common';
+import { debounceTime, distinctUntilChanged, filter, takeUntil } from 'rxjs/operators';
 
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, ReactiveFormsModule, AsyncPipe],
+  imports: [CommonModule, RouterOutlet, RouterLink, ReactiveFormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -48,13 +47,17 @@ export class App implements OnInit, OnDestroy {
   //searchTerm = signal('');
   searchControl = signal(new FormControl(''));
   filteredItems = signal<CoffeeShop[]>([]);
-
+  isDetailsPage = signal(false);
 
   private destroy$ = new Subject<void>();
 
 
-  constructor(private coffeeShopService: CoffeeShopService, private cdr: ChangeDetectorRef) { // runs first
-
+  constructor(
+    private coffeeShopService: CoffeeShopService,
+    private cdr: ChangeDetectorRef,
+    private router: Router
+  ) {
+    this.isDetailsPage.set(this.router.url.startsWith('/coffeeshops'));
   }
 
   protected readonly title = signal('coffeebeans_ui');
@@ -77,11 +80,30 @@ export class App implements OnInit, OnDestroy {
         this.filterResults(term || '');
       });
 
+      this.router.events.pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        takeUntil(this.destroy$)
+      ).subscribe(event => {
+        this.isDetailsPage.set(event.urlAfterRedirects.startsWith('/coffeeshops'));
+      });
+
       // localStorage.setItem('mySavedData', JSON.stringify(this.totalCoffeeShops))
+    }
+
+    updateSearchResults(): void {
+      this.filterResults(this.searchControl().value || '');
+    }
+
+    handleSearchInput(event: Event): void {
+      const input = event.target as HTMLInputElement | null;
+      const value = input?.value ?? '';
+
+      this.searchControl().setValue(value, { emitEvent: false });
+      this.updateSearchResults();
     }
     
     setFilterControl(): void {
-      this.searchControl().setValue(' ');
+      this.searchControl().setValue('');
       this.cdr.detectChanges();
     }
 

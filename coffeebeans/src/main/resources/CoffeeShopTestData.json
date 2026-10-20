@@ -20,10 +20,10 @@
     "cashOk": true
   },
   {
-    "name": "Blue Bottle Coffee",
+    "name": "Blue Bottle Coffee (Ferry Building)",
     "city": "San Francisco",
     "state": "CA",
-    "fullAddress": "300 Webster St, San Francisco, CA 94103",
+    "fullAddress": "1 Ferry Building, San Francisco, CA 94111",
     "outlets": true,
     "bathrooms": true,
     "outdoorSeating": false,
@@ -50,53 +50,953 @@
     "cashOk": true
   },
   {
-    "name": "Espresso Cigar",
-    "city": "Oakland",
+    "name": "Four Barrel Coffee",
+    "city": "San Francisco",
     "state": "CA",
-    "fullAddress": "430 23rd St, Oakland, CA 94612",
+    "fullAddress": "375 Valencia St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Philz Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "748 Van Ness Ave, San Francisco, CA 94102",
     "outlets": true,
     "bathrooms": true,
     "outdoorSeating": true,
     "cashOk": true
   },
   {
-    "name": "Peet's Coffee & Tea",
-    "city": "Berkeley",
+    "name": "Wrecking Ball Coffee Roasters",
+    "city": "San Francisco",
     "state": "CA",
-    "fullAddress": "2156 University Ave, Berkeley, CA 94704",
+    "fullAddress": "2270 Mission St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Verve Coffee Roasters",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2048 Fillmore St, San Francisco, CA 94115",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Caffe Trieste",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "601 Vallejo St, San Francisco, CA 94133",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Mazarine Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2969 24th St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Jane on Fillmore",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2228 Fillmore St, San Francisco, CA 94115",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "The Mill",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "736 Divisadero St, San Francisco, CA 94117",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "B. Patisserie",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2821 California St, San Francisco, CA 94115",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Sweet Maple",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2101 Sutter St, San Francisco, CA 94115",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Equator Coffees",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2020 17th St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Hogshead Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "4238 18th St, San Francisco, CA 94114",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Mission Coffee Works",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "884 Valencia St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Foster Coffee Company",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "510 2nd St, San Francisco, CA 94107",
     "outlets": false,
     "bathrooms": true,
     "outdoorSeating": true,
     "cashOk": false
   },
   {
-    "name": "Café Himalayan",
-    "city": "San Jose",
+    "name": "Coffee Project",
+    "city": "San Francisco",
     "state": "CA",
-    "fullAddress": "149 E Santa Clara St, San Jose, CA 95113",
+    "fullAddress": "1040 Valencia St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Pinhole Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "882 Bush St, San Francisco, CA 94108",
     "outlets": true,
     "bathrooms": true,
     "outdoorSeating": false,
     "cashOk": true
   },
   {
-    "name": "Voyage Coffee Co",
+    "name": "Quartz Coffee",
     "city": "San Francisco",
     "state": "CA",
-    "fullAddress": "2979 16th St, San Francisco, CA 94103",
+    "fullAddress": "1915 Irving St, San Francisco, CA 94122",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Moulin Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "3040 20th St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Saint Frank Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "523 Valencia St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "JBC Coffee Roasters",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1000 4th St, San Francisco, CA 94158",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Blue Bottle Coffee (Mission)",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1085 Valencia St, San Francisco, CA 94110",
     "outlets": true,
     "bathrooms": true,
     "outdoorSeating": true,
     "cashOk": false
   },
   {
-    "name": "The Wormhole Coffee",
-    "city": "Oakland",
+    "name": "Blue Bottle Coffee (Jackson Square)",
+    "city": "San Francisco",
     "state": "CA",
-    "fullAddress": "2247 Telegraph Ave, Oakland, CA 94612",
+    "fullAddress": "2 Jackson St, San Francisco, CA 94111",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Blue Bottle Coffee (SOMA)",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1000 4th St, San Francisco, CA 94158",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Blue Bottle Coffee (Potrero)",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2241 3rd St, San Francisco, CA 94107",
     "outlets": true,
     "bathrooms": true,
     "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Haus Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1205 Harrison St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Nook",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1450 18th St, San Francisco, CA 94107",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Tartine Manufactory",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "595 Alabama St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Cartwheel Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1200 9th Ave, San Francisco, CA 94122",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Castro Coffee Company",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "437 Castro St, San Francisco, CA 94114",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Bean There Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2101 3rd St, San Francisco, CA 94107",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Coffee Bar",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2330 California St, San Francisco, CA 94115",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Caf\u00e9 de la Presse",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "253 Valencia St, San Francisco, CA 94103",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "The Common Cup",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1085 18th St, San Francisco, CA 94107",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Renaissance Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1300 9th Ave, San Francisco, CA 94122",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Goodman Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "4435 3rd St, San Francisco, CA 94124",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Caf\u00e9 La Boh\u00e8me",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2150 Polk St, San Francisco, CA 94109",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Smitten Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "501 2nd St, San Francisco, CA 94107",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Luna Cafe",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "711 Valencia St, San Francisco, CA 94110",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Java Cafe",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1420 Polk St, San Francisco, CA 94109",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Noble Coffee Roasters",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1450 16th St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Tierra Mia Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "3410 18th St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Mercury Cafe",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1118 14th St, San Francisco, CA 94114",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "The Coffee Spot",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2800 24th St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Caf\u00e9 New York",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1250 Seventh Ave, San Francisco, CA 94122",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Caf\u00e9 Saint-Jean",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1460 12th Ave, San Francisco, CA 94122",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": false
+  },
+  {
+    "name": "Mela Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1435 Valencia St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Fable Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "300 Polk St, San Francisco, CA 94102",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Bayshore Cafe",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1570 10th Ave, San Francisco, CA 94122",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Sunset Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1647 Irving St, San Francisco, CA 94122",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Parkside Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2244 Taraval St, San Francisco, CA 94116",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Asteras Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1544 Market St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Clover Coffee Bar",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1070 Mission St, San Francisco, CA 94103",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Organic Coffee Company",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "3120 Clement St, San Francisco, CA 94121",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "The Village Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1050 Folsom St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Caf\u00e9 Frida",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2451 17th St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "SFB Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1735 Chestnut St, San Francisco, CA 94123",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Ginger & Spice Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "3230 20th Ave, San Francisco, CA 94132",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Bernal Heights Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "420 Cortland Ave, San Francisco, CA 94110",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "North Beach Coffee Club",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1300 Columbus Ave, San Francisco, CA 94133",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Caf\u00e9 Lili",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2500 18th St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Mister A's Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1116 California St, San Francisco, CA 94108",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Morningside Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "3500 3rd St, San Francisco, CA 94124",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Coffee & Company",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2330 Market St, San Francisco, CA 94114",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Soul Grind Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "450 Masonic Ave, San Francisco, CA 94118",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Rocket Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2101 3rd St, San Francisco, CA 94107",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Caf\u00e9 Sorella",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2000 Fillmore St, San Francisco, CA 94115",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Haven Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1101 Polk St, San Francisco, CA 94109",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Ava's Coffee House",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1515 Haight St, San Francisco, CA 94117",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Madera Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "780 Valencia St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Hapi Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1750 16th St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Clement Street Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1300 Clement St, San Francisco, CA 94118",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Pacific Coffee Roasters",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "4042 Geary Blvd, San Francisco, CA 94118",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Golden Gate Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1201 9th Ave, San Francisco, CA 94122",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Bayview Coffee Co.",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1240 3rd St, San Francisco, CA 94158",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Oak & Ember Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1960 California St, San Francisco, CA 94109",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Coco Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "4300 18th St, San Francisco, CA 94114",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Valencia Street Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "833 Valencia St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Noriega Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "3720 Noriega St, San Francisco, CA 94122",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Beacon Coffee House",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1232 Market St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "The Coffee Collective",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1501 Castro St, San Francisco, CA 94114",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Brewed Awakening",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "3947 24th St, San Francisco, CA 94114",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Monsoon Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2100 Sutter St, San Francisco, CA 94115",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Sanchez Street Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "4090 Sanchez St, San Francisco, CA 94114",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Noe Valley Java",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "4010 24th St, San Francisco, CA 94114",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "The Coffee Alley",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "739 Clement St, San Francisco, CA 94118",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "City Lights Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "335 Grant Ave, San Francisco, CA 94108",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Northside Coffee House",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "2404 Irving St, San Francisco, CA 94122",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Aster Coffee & Tea",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "901 Valencia St, San Francisco, CA 94110",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Fresh Brew Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1680 Folsom St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Coffee Republic",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "201 8th St, San Francisco, CA 94103",
+    "outlets": false,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "The Coffee Nook",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1500 Chestnut St, San Francisco, CA 94123",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Golden State Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1550 Mission St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
+    "cashOk": true
+  },
+  {
+    "name": "Fog City Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1000 Market St, San Francisco, CA 94103",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": false,
+    "cashOk": true
+  },
+  {
+    "name": "Crescent Coffee Co.",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1750 3rd St, San Francisco, CA 94158",
+    "outlets": true,
+    "bathrooms": true,
+    "outdoorSeating": true,
+    "cashOk": false
+  },
+  {
+    "name": "Union Street Coffee",
+    "city": "San Francisco",
+    "state": "CA",
+    "fullAddress": "1668 Union St, San Francisco, CA 94123",
+    "outlets": true,
+    "bathrooms": false,
+    "outdoorSeating": true,
     "cashOk": true
   }
 ]
